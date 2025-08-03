@@ -1,0 +1,51 @@
+.app {
+  min-height: 100vh;
+  padding: 7.5rem 10.5rem 1.5rem 10.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #e0e0e0;
+}
+
+.error {
+  color: #ff3333;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  align-items: stretch;
+  padding-top: 15px;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .app {
+    padding: 2rem;
+  }
+}

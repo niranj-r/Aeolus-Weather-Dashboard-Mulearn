@@ -1,0 +1,30 @@
+.wrap {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: #e0e0e0;
+    border-radius: 20px;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    overflow-x: auto;
+}
+
+.day {
+    text-align: center;
+    padding: 1rem;
+    min-width: 110px;
+    background: #e0e0e0;
+    border-radius: 18px;
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+}
+
+.desc {
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 768px) {
+    .wrap {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+        align-items: center;
+    }
+}
