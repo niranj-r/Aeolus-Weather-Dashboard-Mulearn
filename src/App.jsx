@@ -21,10 +21,7 @@ function App() {
     localStorage.setItem('favorites', JSON.stringify(favorites));
   }, [favorites]);
 
-  useEffect(() => {
-    handleSearch('kerala');
-  }, []);
-  const handleSearch = async (city) => {
+  const handleSearch = useCallback(async (city) => {
     setLoading(true);
     setError('');
     const apiKey = '71756a1adc15b10186f710bfb5293669';
@@ -48,7 +45,12 @@ function App() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [unit]);
+
+  useEffect(() => {
+    handleSearch('Kerala');
+  }, [handleSearch]);
+
 
   return (
     <div className={styles.app}>
