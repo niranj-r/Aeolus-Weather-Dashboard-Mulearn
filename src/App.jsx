@@ -9,7 +9,7 @@ import Loader from './components/Loader';
 function App() {
   const [weatherData, setWeatherData] = useState(null);
   const [forecastData, setForecastData] = useState(null);
-  const [unit, setUnit] = useState('metric');
+  const [unit] = useState('metric');
   const [favorites, setFavorites] = useState(() => {
     const f = localStorage.getItem('favorites');
     return f ? JSON.parse(f) : [];
