@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import styles from './App.module.css';
 import WeatherSearch from './components/WeatherSearch';
 import WeatherCard from './components/WeatherCard';
